@@ -9,7 +9,7 @@ spring:
         git:
           uri: https://github.com/jiaokewen/breeze-config
           basedir: D:/basedir
-          search-paths: {application}
+          search-paths: "{application}"
       label: master
 eureka:
   client:
