@@ -1,0 +1,17 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: breeze-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jiaokewen/breeze-config
+          basedir: D:/basedir
+          search-paths: {application}
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
