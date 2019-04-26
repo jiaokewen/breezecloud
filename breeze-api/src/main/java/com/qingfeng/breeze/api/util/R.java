@@ -17,7 +17,7 @@ public class R<T> implements Serializable {
 
     private  String message;
 
-    private Integer total;
+    private Long total;
 
     public R() {
 
@@ -36,7 +36,7 @@ public class R<T> implements Serializable {
         this.data = data;
     }
 
-    public  R (boolean success,String code, String message, T data, Integer total) {
+    public  R (boolean success,String code, String message, T data, Long total) {
         this.success = success;
         this.code = code;
         this.message = message;
@@ -56,7 +56,7 @@ public class R<T> implements Serializable {
         return new R(false,code,message,data);
     }
 
-    public static <T>R success (String code, String message, T data, Integer total) {
+    public static <T>R success (String code, String message, T data, Long total) {
         return new R(false,code,message,data,total);
     }
 }

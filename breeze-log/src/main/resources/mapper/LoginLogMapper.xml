@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingfeng.breeze.log.mapper.LoginLogMapper" >
+  <resultMap id="BaseResultMap" type="com.qingfeng.breeze.log.model.LoginLog" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="login_date" property="loginDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_name, ip, login_date
+  </sql>
+  <select id="listByPage" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select
+    <include refid="Base_Column_List" />
+    from login_log
+    <where>
+      <if test="userName !=null and userName != ''">
+        user_name = CONCAT('%',#{factory,jdbcType=VARCHAR},'%')
+      </if>
+    </where>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from login_log
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from login_log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qingfeng.breeze.log.model.LoginLog" >
+    insert into login_log (id, user_name, ip, 
+      login_date)
+    values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{ip,jdbcType=VARCHAR}, 
+      #{loginDate,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.qingfeng.breeze.log.model.LoginLog" >
+    update login_log
+    set user_name = #{userName,jdbcType=VARCHAR},
+      ip = #{ip,jdbcType=VARCHAR},
+      login_date = #{loginDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

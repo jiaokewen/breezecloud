@@ -18,7 +18,7 @@
         </commentGenerator>
         <!-- 配置数据库连接 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/laboratory_config"
+                        connectionURL="jdbc:mysql://localhost:3306/breeze"
                         userId="root"
                         password="root" />
 
@@ -40,7 +40,7 @@
         </javaClientGenerator>
 
         <!-- table表生成对应的DoaminObject -->
-        <table tableName="c_log_login" domainObjectName="LogLogin"
+        <table tableName="login_log" domainObjectName="LoginLog"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
