@@ -1,5 +1,7 @@
 package com.qingfeng.breeze.api.util;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -17,6 +19,7 @@ public class R<T> implements Serializable {
 
     private  String message;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Long total;
 
     public R() {
@@ -53,10 +56,10 @@ public class R<T> implements Serializable {
     }
 
     public static <T>R success (String code, String message, T data) {
-        return new R(false,code,message,data);
+        return new R(true,code,message,data);
     }
 
     public static <T>R success (String code, String message, T data, Long total) {
-        return new R(false,code,message,data,total);
+        return new R(true,code,message,data,total);
     }
 }

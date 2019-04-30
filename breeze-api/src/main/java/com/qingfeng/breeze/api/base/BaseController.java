@@ -37,8 +37,8 @@ public class BaseController<T> {
         return service.updateByPrimaryKey(record);
     }
 
-//    @PostMapping()
-//    public R<T> listByPage (Map<String, Object> map){
-//        return service.listByPage(map);
-//    }
+    @PostMapping(value = "/list")
+    public R<T> listByPage (Map<String, Object> map){
+        return service.listByPage(map);
+    }
 }
