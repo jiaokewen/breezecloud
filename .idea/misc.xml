@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/breeze-config/pom.xml" />
         <option value="$PROJECT_DIR$/breeze-mongodb/pom.xml" />
         <option value="$PROJECT_DIR$/breeze-log/pom.xml" />
+        <option value="$PROJECT_DIR$/breeze-gateway/pom.xml" />
       </list>
     </option>
   </component>

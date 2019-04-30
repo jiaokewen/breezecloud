@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="653d0e23-380c-4168-b27b-14a59768956f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/util/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/util/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-api/src/main/java/util/RSAUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-eureka/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-eureka/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-log/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-log/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/controller/LoginLogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,6 +15,7 @@
     <ignored path="$PROJECT_DIR$/breeze-mongodb/target/" />
     <ignored path="$PROJECT_DIR$/breeze-log/target/" />
     <ignored path="$PROJECT_DIR$/breeze-api/target/" />
+    <ignored path="$PROJECT_DIR$/breeze-gateway/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +23,44 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/breeze-gateway/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/breeze-log/src/main/resources/bootstrap.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="11" lean-forward="true" selection-end-line="12" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/breeze-gateway/src/main/resources/bootstrap.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/breeze-log/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="29" selection-start-line="29" selection-end-line="32" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -74,16 +104,21 @@
         <option value="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseMapper.java" />
         <option value="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseService.java" />
         <option value="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/util/R.java" />
         <option value="$PROJECT_DIR$/breeze-api/pom.xml" />
         <option value="$PROJECT_DIR$/breeze-log/src/main/resources/mapper/LoginLogMapper.xml" />
         <option value="$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/mapper/LoginLogMapper.java" />
         <option value="$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/service/impl/LoginLogServiceImpl.java" />
         <option value="$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/controller/LoginLogController.java" />
-        <option value="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseController.java" />
         <option value="$PROJECT_DIR$/breeze-log/pom.xml" />
         <option value="$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/Application.java" />
+        <option value="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseController.java" />
+        <option value="$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/util/R.java" />
+        <option value="$PROJECT_DIR$/breeze-gateway/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/breeze-gateway/src/main/java/com/qingfeng/breeze/gateway/Application.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/breeze-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/breeze-gateway/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/breeze-gateway/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -134,6 +169,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,16 +178,83 @@
               <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-log" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-log" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="breezecloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="breezecloud" type="462c0819:PsiDirectoryNode" />
+              <item name="breeze-log" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556246959865" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556608488752" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/springcloud-config" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
@@ -203,6 +307,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="gateway" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.qingfeng.breeze.gateway.Application" />
+      <module name="breeze-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qingfeng.breeze.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="log" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.qingfeng.breeze.log.Application" />
       <module name="breeze-log" />
@@ -217,13 +334,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.eureka" />
       <item itemvalue="Application.config" />
+      <item itemvalue="Application.eureka" />
       <item itemvalue="Application.log" />
+      <item itemvalue="Application.gateway" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.log" />
+        <item itemvalue="Application.gateway" />
         <item itemvalue="Application.config" />
         <item itemvalue="Application.eureka" />
       </list>
@@ -244,8 +363,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28455943" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3039612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -254,12 +374,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39431617" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39253998" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3285968" />
@@ -318,10 +438,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/breeze-eureka/src/main/java/com/qingfeng/breeze/eureka/LogOperateBeanMapper.java" />
-    <entry file="file://$PROJECT_DIR$/breeze-eureka/src/main/java/com/qingfeng/breeze/eureka/LogOperateBeanExample.java" />
-    <entry file="file://$PROJECT_DIR$/breeze-eureka/src/main/java/com/qingfeng/breeze/eureka/LogOperate.java" />
-    <entry file="file://$PROJECT_DIR$/breeze-eureka/src/main/java/com/qingfeng/breeze/eureka/LogOperateMapper.java" />
     <entry file="file://$PROJECT_DIR$/breeze-eureka/src/main/resources/mapper/LogOperateMapper.xml" />
     <entry file="file://$PROJECT_DIR$/breeze-eureka/src/main/java/com/qingfeng/breeze/eureka/LogLogin.java" />
     <entry file="file://$PROJECT_DIR$/breeze-eureka/src/main/resources/mapper/LogLoginMapper.xml" />
@@ -396,13 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/breeze-log/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/util/A.java" />
     <entry file="file://$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/model/A.java" />
     <entry file="file://$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/annotation/BaseController.java" />
@@ -473,24 +582,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="74" column="23" lean-forward="true" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/breeze-api/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="726">
           <caret line="33" selection-start-line="33" selection-end-line="36" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/breeze-log/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -519,42 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/controller/LoginLogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/util/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -588,15 +647,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/controller/LoginLogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/util/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/breeze-api/src/main/java/com/qingfeng/breeze/api/base/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="531">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#641#642#0" expanded="true" />
             <element signature="e#694#695#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/breeze-log/src/main/java/com/qingfeng/breeze/log/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/breeze-gateway/src/main/java/com/qingfeng/breeze/gateway/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/breeze-log/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="29" selection-start-line="29" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/breeze-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/breeze-gateway/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/breeze-log/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="11" lean-forward="true" selection-end-line="12" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/breeze-gateway/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
