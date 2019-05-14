@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="breeze-api" />
+        <module name="breeze-auth" />
         <module name="breeze-config" />
         <module name="breeze-eureka" />
         <module name="breeze-gateway" />
         <module name="breeze-log" />
         <module name="breeze-mongodb" />
+        <module name="breeze-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,11 +23,13 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="breeze-api" options="-parameters" />
+      <module name="breeze-auth" options="-parameters" />
       <module name="breeze-config" options="-parameters" />
       <module name="breeze-eureka" options="-parameters" />
       <module name="breeze-gateway" options="-parameters" />
       <module name="breeze-log" options="-parameters" />
       <module name="breeze-mongodb" options="-parameters" />
+      <module name="breeze-user" options="-parameters" />
       <module name="breezeapi" options="-parameters" />
       <module name="breezecloud" options="-parameters" />
     </option>
