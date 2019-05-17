@@ -5,9 +5,11 @@ spring:
     config:
       discovery:
         enabled: true
-        service-id: breeze-config # 注册中心的服务名
+        service-id: breeze-config # 娉ㄥ唽涓績鐨勬湇鍔″悕
       profile: dev
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka/
+  instance:
+    prefer-ip-address: true

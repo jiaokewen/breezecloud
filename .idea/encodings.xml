@@ -4,11 +4,13 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/breeze-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/breeze-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/breeze-auth/src/main/resources/bootstrap.yml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/breeze-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/breeze-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/breeze-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/breeze-log" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/breeze-mongodb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/breeze-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client-a" charset="UTF-8" />
   </component>
 </project>

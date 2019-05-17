@@ -7,32 +7,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.Enumeration;
+
 @RestController
 @RequestMapping(value = "/loginLog/")
 public class LoginLogController extends BaseController<LoginLog> {
 
-    public static int strStr(String haystack, String needle) {
-        if (needle == null || needle.equals("")) {
-            return 0;
+    @RequestMapping("/test")
+    public String test(HttpServletRequest request) {
+        System.out.println("----------------header----------------");
+        Enumeration headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()) {
+            String key = (String) headerNames.nextElement();
+            System.out.println(key + ": " + request.getHeader(key));
         }
-        if (haystack == null || haystack.equals("")) {
-            return -1;
-        }
-        int n = needle.length();
-        loop: for (int i=0; i <=haystack.length()-n;i++) {
-            if (haystack.charAt(i) == needle.charAt(0)) {
-                for (int j=1;j<n;j++) {
-                    if (haystack.charAt(i+j) != needle.charAt(j)) {
-                        continue loop;
-                    }
-                }
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(strStr("mississippi","asssasd"));
+        System.out.println("----------------header----------------");
+        return "hellooooooooooooooo!";
     }
 }

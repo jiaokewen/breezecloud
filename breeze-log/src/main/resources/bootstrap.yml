@@ -7,7 +7,10 @@ spring:
         enabled: true
         service-id: breeze-config # 注册中心的服务名
       profile: dev
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka/
+  instance:
+    prefer-ip-address: true
