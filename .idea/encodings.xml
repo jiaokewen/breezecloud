@@ -11,6 +11,6 @@
     <file url="file://$PROJECT_DIR$/breeze-log" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/breeze-mongodb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/breeze-user" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/client-a" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/breeze-user/src/main/resources/bootstrap.yml" charset="GBK" />
   </component>
 </project>

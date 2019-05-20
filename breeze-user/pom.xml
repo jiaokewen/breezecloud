@@ -3,10 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>com.qingfeng</groupId>
+		<artifactId>breeze-cloud</artifactId>
+		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<groupId>com.qingfeng.breeze</groupId>
 	<artifactId>breeze-user</artifactId>
@@ -60,6 +59,10 @@
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-oauth2</artifactId>
 		</dependency>
 	</dependencies>
 
