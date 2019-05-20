@@ -20,6 +20,8 @@
         <module>breeze-eureka</module>
         <module>breeze-config</module>
         <module>breeze-log</module>
+        <module>breeze-auth</module>
+        <module>breeze-user</module>
         <module>breeze-api</module>
     </modules>
     <properties>
