@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.qingfeng.breeze.user.SysUserMapper" >
-  <resultMap id="BaseResultMap" type="com.qingfeng.breeze.user.SysUser" >
+<mapper namespace="com.qingfeng.breeze.user.mapper.SysUserMapper" >
+  <resultMap id="BaseResultMap" type="com.qingfeng.breeze.user.model.SysUser" >
     <id column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
     <result column="login_name" property="loginName" jdbcType="VARCHAR" />
@@ -27,7 +27,7 @@
     delete from sys_user
     where user_id = #{userId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.qingfeng.breeze.user.SysUser" >
+  <insert id="insert" parameterType="com.qingfeng.breeze.user.model.SysUser" >
     insert into sys_user (user_id, nick_name, login_name, 
       password, email, phone_number, 
       wechat_number, last_login_date, sex, 
@@ -37,7 +37,7 @@
       #{wechatNumber,jdbcType=VARCHAR}, #{lastLoginDate,jdbcType=TIMESTAMP}, #{sex,jdbcType=CHAR}, 
       #{age,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.qingfeng.breeze.user.SysUser" >
+  <insert id="insertSelective" parameterType="com.qingfeng.breeze.user.model.SysUser" >
     insert into sys_user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="userId != null" >
@@ -104,7 +104,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.qingfeng.breeze.user.SysUser" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.qingfeng.breeze.user.model.SysUser" >
     update sys_user
     <set >
       <if test="nickName != null" >
@@ -137,7 +137,7 @@
     </set>
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.qingfeng.breeze.user.SysUser" >
+  <update id="updateByPrimaryKey" parameterType="com.qingfeng.breeze.user.model.SysUser" >
     update sys_user
     set nick_name = #{nickName,jdbcType=VARCHAR},
       login_name = #{loginName,jdbcType=VARCHAR},
