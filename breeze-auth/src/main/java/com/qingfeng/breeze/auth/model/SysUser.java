@@ -1,4 +1,4 @@
-package com.qingfeng.breeze.user.model;
+package com.qingfeng.breeze.auth.model;
 
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;

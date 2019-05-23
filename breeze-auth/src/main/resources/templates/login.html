@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个HTML页面</title>
+</head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <h2>自定义登录页面</h2>
+    <form th:action="@{/login}" method="post">
+        <label>
+            <span>用户名：</span>
+            <input type="text" name="username">
+            <!--<input type="text" name="uname">-->
+        </label>
+        <br/>
+        <label>
+            <span>密码：</span>
+            <input type="password" name="password">
+            <!--<input type="password" name="psd">-->
+        </label>
+        <input type="hidden"
+               name="${_csrf.parameterName}"
+               value="${_csrf.token}"/>
+        <input type="submit" class="submit input_button"  value="登录">
+    </form>
+</div>
+</body>
+</html>

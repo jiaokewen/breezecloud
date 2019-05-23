@@ -1,6 +1,7 @@
 package com.qingfeng.breeze.user.service;
 
 import com.qingfeng.breeze.api.base.BaseService;
+import com.qingfeng.breeze.api.util.R;
 import com.qingfeng.breeze.user.model.SysUser;
 
 /**
@@ -9,4 +10,7 @@ import com.qingfeng.breeze.user.model.SysUser;
  * @date 2019/5/20 15:48
  */
 public interface SysUserService extends BaseService<SysUser> {
+
+    R<SysUser> selectByLoginName (String loginName);
+
 }

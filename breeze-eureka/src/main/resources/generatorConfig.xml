@@ -40,7 +40,7 @@
         </javaClientGenerator>
 
         <!-- table表生成对应的DoaminObject -->
-        <table tableName="login_log" domainObjectName="LoginLog"
+        <table tableName="sys_user" domainObjectName="SysUser"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"

@@ -1,9 +1,11 @@
 package com.qingfeng.breeze.user.controller;
 
 import com.qingfeng.breeze.api.base.BaseController;
+import com.qingfeng.breeze.api.util.R;
 import com.qingfeng.breeze.user.model.SysUser;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.qingfeng.breeze.user.service.SysUserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author qingfeng
@@ -13,4 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/sysUser/")
 public class SysUserController extends BaseController<SysUser> {
+
+    @Autowired
+    private SysUserService service;
+
+    @GetMapping(value = "selectByLoginName")
+    public R<SysUser> selectByLoginName (@RequestParam("loginName") String loginName) {
+        return service.selectByLoginName(loginName);
+    }
+
 }

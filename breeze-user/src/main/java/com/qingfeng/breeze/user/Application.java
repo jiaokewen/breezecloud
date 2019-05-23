@@ -29,6 +29,7 @@ public class Application extends ResourceServerConfigurerAdapter {
 		http
 				.csrf().disable()
 				.authorizeRequests()
+				.antMatchers("/sysUser/selectByLoginName").permitAll()
 				.antMatchers("/**").authenticated()
 				.antMatchers(HttpMethod.GET, "/test")
 				.hasAuthority("WRIGTH_READ");
