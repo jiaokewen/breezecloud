@@ -5,6 +5,7 @@ import com.qingfeng.breeze.api.util.R;
 import com.qingfeng.breeze.user.model.SysUser;
 import com.qingfeng.breeze.user.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -24,4 +25,15 @@ public class SysUserController extends BaseController<SysUser>{
         return service.selectByLoginName(loginName);
     }
 
+    @PreAuthorize("hasAuthority('SYS_USER_TEST')")
+    @GetMapping(value = "test/{loginName}")
+    public R<SysUser> test (@PathVariable("loginName") String loginName) {
+        return service.selectByLoginName(loginName);
+    }
+
+    @PreAuthorize("hasAuthority('SYS_USER_TEST1')")
+    @GetMapping(value = "test1/{loginName}")
+    public R<SysUser> test1 (@PathVariable("loginName") String loginName) {
+        return service.selectByLoginName(loginName);
+    }
 }

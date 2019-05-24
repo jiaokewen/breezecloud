@@ -37,7 +37,7 @@ public class SysUser implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         // 这里我们没有用到权限，所以返回一个默认的admin权限
-        return AuthorityUtils.commaSeparatedStringToAuthorityList("admin");
+        return AuthorityUtils.commaSeparatedStringToAuthorityList("admin,SYS_USER_TEST");
     }
 
     @Override
