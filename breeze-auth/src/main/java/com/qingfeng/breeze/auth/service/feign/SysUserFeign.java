@@ -3,10 +3,7 @@ package com.qingfeng.breeze.auth.service.feign;
 import com.qingfeng.breeze.api.util.R;
 import com.qingfeng.breeze.auth.model.SysUser;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author qingfeng
@@ -16,6 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "breeze-user",fallbackFactory =SysUserFeignHystric.class)
 public interface SysUserFeign {
 
-    @RequestMapping(value = "/sysUser/selectByLoginName",method = RequestMethod.GET)
-    R<SysUser> selectByLoginName(@RequestParam(value = "loginName") String loginName);
+    @RequestMapping(value = "/sysUser/loginName/{loginName}",method = RequestMethod.GET)
+    R<SysUser> selectByLoginName(@PathVariable("loginName") String loginName);
 }

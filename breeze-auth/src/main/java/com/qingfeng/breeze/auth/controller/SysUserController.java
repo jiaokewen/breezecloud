@@ -5,10 +5,7 @@ import com.qingfeng.breeze.api.util.R;
 import com.qingfeng.breeze.auth.model.SysUser;
 import com.qingfeng.breeze.auth.service.feign.SysUserFeign;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author qingfeng
@@ -22,13 +19,9 @@ public class SysUserController {
     @Autowired
     private SysUserFeign sysUserFeign;
 
-    @GetMapping(value = "selectByLoginName")
-    public R<SysUser> selectByLoginName (@RequestParam("loginName") String loginName) {
+    @GetMapping(value = "loginName/{loginName}")
+    public R<SysUser> selectByLoginName (@PathVariable("loginName") String loginName) {
         return sysUserFeign.selectByLoginName(loginName);
     }
 
-    @GetMapping(value = "test")
-    public R<SysUser> test () {
-        return R.fail("1","1");
-    }
 }

@@ -10,20 +10,20 @@ public class ResponseConsts {
     /**
      * 请求成功编码
      */
-    public static final String SUCCESS = "200";
+    public static final int SUCCESS = 200;
 
     /**
      * 服务器异常
      */
-    public static final String ERROR = "500";
+    public static final int ERROR = 500;
 
     /**
      * 未登录
      */
-    public static final String NOT_LOGGED_IN = "401";
+    public static final int NOT_LOGGED_IN = 401;
 
     /**
      * 无权限
      */
-    public static final String NO_PERMISSION = "403";
+    public static final int NO_PERMISSION = 403;
 }

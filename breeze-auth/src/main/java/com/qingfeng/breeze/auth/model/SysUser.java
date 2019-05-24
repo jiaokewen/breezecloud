@@ -26,12 +26,17 @@ public class SysUser implements UserDetails {
 
     private Date lastLoginDate;
 
-    private String sex;
+    private Integer sex;
 
     private Integer age;
 
+    private Integer state;
+
+    private String avatarUrl;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        // 这里我们没有用到权限，所以返回一个默认的admin权限
         return AuthorityUtils.commaSeparatedStringToAuthorityList("admin");
     }
 
@@ -41,22 +46,27 @@ public class SysUser implements UserDetails {
     }
 
     @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 }

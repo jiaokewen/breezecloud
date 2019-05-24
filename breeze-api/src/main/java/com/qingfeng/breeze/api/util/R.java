@@ -13,7 +13,7 @@ public class R<T> implements Serializable {
 
     private boolean success;
 
-    private String code;
+    private int code;
 
     private T data;
 
@@ -26,20 +26,20 @@ public class R<T> implements Serializable {
 
     }
 
-    public R (boolean success,String code,String message) {
+    public R (boolean success,int code,String message) {
         this.success = success;
         this.code = code;
         this.message = message;
     }
 
-    public  R (boolean success,String code, String message, T data) {
+    public  R (boolean success,int code, String message, T data) {
         this.success = success;
         this.code = code;
         this.message = message;
         this.data = data;
     }
 
-    public  R (boolean success,String code, String message, T data, Long total) {
+    public  R (boolean success,int code, String message, T data, Long total) {
         this.success = success;
         this.code = code;
         this.message = message;
@@ -47,19 +47,19 @@ public class R<T> implements Serializable {
         this.total = total;
     }
 
-    public static <T>R success (String code, String message) {
+    public static <T>R success (int code, String message) {
         return new R(true,code,message);
     }
 
-    public static <T>R fail (String code, String message) {
+    public static <T>R fail (int code, String message) {
         return new R(false,code,message);
     }
 
-    public static <T>R success (String code, String message, T data) {
+    public static <T>R success (int code, String message, T data) {
         return new R(true,code,message,data);
     }
 
-    public static <T>R success (String code, String message, T data, Long total) {
+    public static <T>R success (int code, String message, T data, Long total) {
         return new R(true,code,message,data,total);
     }
 }

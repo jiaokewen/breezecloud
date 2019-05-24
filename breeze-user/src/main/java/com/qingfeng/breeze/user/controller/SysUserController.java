@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping(value = "/sysUser/")
-public class SysUserController extends BaseController<SysUser> {
+public class SysUserController extends BaseController<SysUser>{
 
     @Autowired
     private SysUserService service;
 
-    @GetMapping(value = "selectByLoginName")
-    public R<SysUser> selectByLoginName (@RequestParam("loginName") String loginName) {
+    @GetMapping(value = "loginName/{loginName}")
+    public R<SysUser> selectByLoginName (@PathVariable("loginName") String loginName) {
         return service.selectByLoginName(loginName);
     }
 

@@ -1,15 +1,10 @@
 package com.qingfeng.breeze.user.model;
 
 import lombok.Data;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.UserDetails;
-
-import java.util.Collection;
 import java.util.Date;
 
 @Data
-public class SysUser implements UserDetails {
+public class SysUser{
     private Integer userId;
 
     private String nickName;
@@ -26,37 +21,11 @@ public class SysUser implements UserDetails {
 
     private Date lastLoginDate;
 
-    private String sex;
+    private Integer sex;
 
     private Integer age;
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return AuthorityUtils.commaSeparatedStringToAuthorityList("admin");
-    }
+    private Integer state;
 
-    @Override
-    public String getUsername() {
-        return loginName;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return false;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return false;
-    }
+    private String avatarUrl;
 }
