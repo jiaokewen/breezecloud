@@ -21,6 +21,9 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         UserDetails user = sysUserFeign.selectByLoginName(s).getData();
+        if (user == null) {
+            throw new UsernameNotFoundException("用户名不存在");
+        }
         return user;
     }
 }
