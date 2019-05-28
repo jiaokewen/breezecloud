@@ -1,5 +1,7 @@
 package com.qingfeng.breeze.auth.config;
 
+import com.qingfeng.breeze.auth.handler.LoginFailHandler;
+import com.qingfeng.breeze.auth.handler.LoginSuccessHandler;
 import com.qingfeng.breeze.auth.service.impl.UserDetailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -27,8 +29,15 @@ import org.springframework.web.context.request.RequestContextListener;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled =true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Autowired
     private UserDetailsService userDetailsService;
+
+    @Autowired
+    private LoginFailHandler loginFailHandler;
+
+    @Autowired
+    private LoginSuccessHandler loginSuccessHandler;
 
     @Bean(name = BeanIds.AUTHENTICATION_MANAGER)
     @Override
@@ -67,8 +76,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 //指定登录页的路径
                 .loginPage("/login")
-                .failureUrl("/login?error")
-                .defaultSuccessUrl("/success")
+                .successHandler(loginSuccessHandler)
+                .failureHandler(loginFailHandler)
                 //必须允许所有用户访问我们的登录页（例如未验证的用户，否则验证流程就会进入死循环）
                 //这个formLogin().permitAll()方法允许所有用户基于表单登录访问/login这个page。
                 .permitAll();
