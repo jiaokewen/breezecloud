@@ -9,4 +9,5 @@ import com.qingfeng.breeze.user.model.SysRoleResources;
  * @date 2019/5/24 10:48
  */
 public interface SysRoleResourcesService extends BaseService<SysRoleResources> {
+
 }

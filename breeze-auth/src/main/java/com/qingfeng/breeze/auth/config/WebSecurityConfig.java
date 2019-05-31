@@ -82,7 +82,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //这个formLogin().permitAll()方法允许所有用户基于表单登录访问/login这个page。
                 .permitAll();
         //默认都会产生一个hiden标签 里面有安全相关的验证 防止请求伪造 这边我们暂时不需要 可禁用掉
-        http .csrf().disable();
+        http .cors().and().csrf().disable();;
 
     }
 

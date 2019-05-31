@@ -31,7 +31,7 @@ public class BaseServiceImpl<T> implements BaseService<T>{
             mapper.deleteByPrimaryKey(id);
             return R.success(ResponseConsts.SUCCESS,"删除成功");
         }catch (Exception e) {
-            return R.success(ResponseConsts.ERROR,"删除失败");
+            return R.fail(ResponseConsts.ERROR,"删除失败");
         }
     }
 
@@ -41,7 +41,7 @@ public class BaseServiceImpl<T> implements BaseService<T>{
             mapper.insert(record);
             return R.success(ResponseConsts.SUCCESS,"新增成功");
         }catch (Exception e) {
-            return R.success(ResponseConsts.ERROR,"新增失败");
+            return R.fail(ResponseConsts.ERROR,"新增失败");
         }
     }
 
@@ -51,7 +51,7 @@ public class BaseServiceImpl<T> implements BaseService<T>{
             T record = mapper.selectByPrimaryKey(id);
             return R.success(ResponseConsts.SUCCESS,"获取数据成功",record);
         }catch (Exception e) {
-            return R.success(ResponseConsts.ERROR,"获取数据失败");
+            return R.fail(ResponseConsts.ERROR,"获取数据失败");
         }
     }
 
@@ -61,7 +61,7 @@ public class BaseServiceImpl<T> implements BaseService<T>{
             mapper.updateByPrimaryKey(record);
             return R.success(ResponseConsts.SUCCESS,"更新成功",record);
         }catch (Exception e) {
-            return R.success(ResponseConsts.ERROR,"更新失败");
+            return R.fail(ResponseConsts.ERROR,"更新失败");
         }
     }
 

@@ -114,4 +114,21 @@
       icon = #{icon,jdbcType=VARCHAR}
     where resources_id = #{resourcesId,jdbcType=INTEGER}
   </update>
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    SELECT
+    re.resources_id,
+    re.icon,
+    re.parent_id,
+    re.resources_code,
+    re.resources_name,
+    re.resources_url,
+    re.type
+    FROM
+    sys_resources re
+    LEFT JOIN sys_role_resources rr ON re.resources_id = rr.resources_id
+    LEFT JOIN sys_role r ON rr.role_id = r.role_id
+    LEFT JOIN sys_user_role ur ON r.role_id = ur.role_id
+    LEFT JOIN sys_user u ON ur.user_id = u.user_id
+    WHERE u.user_id = #{userId,jdbcType=INTEGER}
+  </select>
 </mapper>
