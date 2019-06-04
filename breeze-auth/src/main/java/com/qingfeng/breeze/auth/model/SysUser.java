@@ -1,12 +1,14 @@
 package com.qingfeng.breeze.auth.model;
 
 import lombok.Data;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class SysUser implements UserDetails {
@@ -34,10 +36,14 @@ public class SysUser implements UserDetails {
 
     private String avatarUrl;
 
+    private List<String> resources;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         // 这里我们没有用到权限，所以返回一个默认的admin权限
-        return AuthorityUtils.commaSeparatedStringToAuthorityList("admin,SYS_USER_TEST");
+        String[] strings = new String[resources.size()];
+        strings = resources.toArray(strings);
+        return AuthorityUtils.commaSeparatedStringToAuthorityList(StringUtils.join(strings,","));
     }
 
     @Override

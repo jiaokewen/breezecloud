@@ -2,6 +2,7 @@ package com.qingfeng.breeze.user.controller;
 
 import com.qingfeng.breeze.api.base.BaseController;
 import com.qingfeng.breeze.api.util.R;
+import com.qingfeng.breeze.user.dto.SysUserDTO;
 import com.qingfeng.breeze.user.model.SysUser;
 import com.qingfeng.breeze.user.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,19 +22,19 @@ public class SysUserController extends BaseController<SysUser>{
     private SysUserService service;
 
     @GetMapping(value = "loginName/{loginName}")
-    public R<SysUser> selectByLoginName (@PathVariable("loginName") String loginName) {
+    public R<SysUserDTO> selectByLoginName (@PathVariable("loginName") String loginName) {
         return service.selectByLoginName(loginName);
     }
 
     @PreAuthorize("hasAuthority('SYS_USER_TEST')")
     @GetMapping(value = "test/{loginName}")
-    public R<SysUser> test (@PathVariable("loginName") String loginName) {
+    public R<SysUserDTO> test (@PathVariable("loginName") String loginName) {
         return service.selectByLoginName(loginName);
     }
 
     @PreAuthorize("hasAuthority('SYS_USER_TEST1')")
     @GetMapping(value = "test1/{loginName}")
-    public R<SysUser> test1 (@PathVariable("loginName") String loginName) {
+    public R<SysUserDTO> test1 (@PathVariable("loginName") String loginName) {
         return service.selectByLoginName(loginName);
     }
 }

@@ -15,6 +15,20 @@
     <result column="state" property="state" jdbcType="INTEGER" />
     <result column="avatar_url" property="avatarUrl" jdbcType="VARCHAR" />
   </resultMap>
+  <resultMap id="ExtendResultMap" type="com.qingfeng.breeze.user.dto.SysUserDTO" >
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    <result column="login_name" property="loginName" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR" />
+    <result column="wechat_number" property="wechatNumber" jdbcType="VARCHAR" />
+    <result column="last_login_date" property="lastLoginDate" jdbcType="TIMESTAMP" />
+    <result column="sex" property="sex" jdbcType="INTEGER" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="avatar_url" property="avatarUrl" jdbcType="VARCHAR" />
+  </resultMap>
   <sql id="Base_Column_List" >
     user_id, nick_name, login_name, password, email, phone_number, wechat_number, last_login_date,
     sex, age, state, avatar_url
@@ -25,11 +39,11 @@
     from sys_user
     where user_id = #{userId,jdbcType=INTEGER}
   </select>
-  <select id="selectByLoginName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+  <select id="selectByLoginName" resultMap="ExtendResultMap"  parameterType="java.lang.String" >
     select
     <include refid="Base_Column_List" />
     from sys_user
-    where login_name = #{loginName,jdbcType=INTEGER}
+    where login_name = #{loginName,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from sys_user
