@@ -1,0 +1,19 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: breeze-zipkin
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/ #注册服务器地址
+management:
+  security:
+    enabled: false #关闭验证
+info: #/info请求的显示信息
+  app:
+    name: ${spring.application.name}
+    version: 1.0.0
+  build:
+    artifactId: @project.artifactId@
+    version: @project.version@

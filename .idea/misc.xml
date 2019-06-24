@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/breeze-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/breeze-auth/pom.xml" />
         <option value="$PROJECT_DIR$/breeze-user/pom.xml" />
+        <option value="$PROJECT_DIR$/breeze-zipkin/pom.xml" />
       </list>
     </option>
   </component>
