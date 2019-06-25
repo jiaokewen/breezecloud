@@ -31,6 +31,7 @@ public class BaseServiceImpl<T> implements BaseService<T>{
             mapper.deleteByPrimaryKey(id);
             return R.success(ResponseConsts.SUCCESS,"删除成功");
         }catch (Exception e) {
+            logger.error(e.getMessage(),e);
             return R.fail(ResponseConsts.ERROR,"删除失败");
         }
     }
@@ -41,6 +42,7 @@ public class BaseServiceImpl<T> implements BaseService<T>{
             mapper.insert(record);
             return R.success(ResponseConsts.SUCCESS,"新增成功");
         }catch (Exception e) {
+            logger.error(e.getMessage(),e);
             return R.fail(ResponseConsts.ERROR,"新增失败");
         }
     }
@@ -51,6 +53,7 @@ public class BaseServiceImpl<T> implements BaseService<T>{
             T record = mapper.selectByPrimaryKey(id);
             return R.success(ResponseConsts.SUCCESS,"获取数据成功",record);
         }catch (Exception e) {
+            logger.error(e.getMessage(),e);
             return R.fail(ResponseConsts.ERROR,"获取数据失败");
         }
     }
@@ -67,12 +70,17 @@ public class BaseServiceImpl<T> implements BaseService<T>{
 
     @Override
     public R<T> listByPage(Map<String, Object> map) {
-        int page =(int)map.get("page");
-        int rows = (int)map.get("rows");
-        PageHelper.startPage(page,rows);
-        List<T> list = mapper.listByPage(map);
-        PageInfo<T> pageInfo = new PageInfo<>(list);
-        return R.success(ResponseConsts.SUCCESS,"获取数据成功",
-                list,pageInfo.getTotal());
+        try {
+            int page =(int)map.get("page");
+            int rows = (int)map.get("rows");
+            PageHelper.startPage(page,rows);
+            List<T> list = mapper.listByPage(map);
+            PageInfo<T> pageInfo = new PageInfo<>(list);
+            return R.success(ResponseConsts.SUCCESS,"获取数据成功",
+                    list,pageInfo.getTotal());
+        } catch (Exception e) {
+            logger.error(e.getMessage(),e);
+            return R.fail(ResponseConsts.ERROR,"获取数据失败");
+        }
     }
 }

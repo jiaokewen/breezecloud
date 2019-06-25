@@ -200,7 +200,7 @@
     from sys_user
     <where>
       <if test="nickName !=null and nickName != ''">
-        nick_name = CONCAT('%',#{nick_name,jdbcType=VARCHAR},'%')
+        nick_name like CONCAT('%',#{nickName,jdbcType=VARCHAR},'%')
       </if>
     </where>
   </select>

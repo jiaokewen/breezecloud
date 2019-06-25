@@ -38,7 +38,7 @@ public class BaseController<T> {
     }
 
     @PostMapping(value = "/list")
-    public R<T> listByPage (Map<String, Object> map){
+    public R<T> listByPage (@RequestBody Map<String, Object> map){
         return service.listByPage(map);
     }
 }
