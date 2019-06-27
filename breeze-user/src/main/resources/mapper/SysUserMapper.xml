@@ -183,7 +183,6 @@
     update sys_user
     set nick_name = #{nickName,jdbcType=VARCHAR},
     login_name = #{loginName,jdbcType=VARCHAR},
-    password = #{password,jdbcType=VARCHAR},
     email = #{email,jdbcType=VARCHAR},
     phone_number = #{phoneNumber,jdbcType=VARCHAR},
     wechat_number = #{wechatNumber,jdbcType=VARCHAR},
