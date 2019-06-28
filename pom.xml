@@ -23,6 +23,7 @@
         <module>breeze-auth</module>
         <module>breeze-user</module>
         <module>breeze-api</module>
+        <module>breeze-file</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
