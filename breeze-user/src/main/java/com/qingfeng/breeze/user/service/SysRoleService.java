@@ -5,6 +5,7 @@ import com.qingfeng.breeze.api.util.R;
 import com.qingfeng.breeze.user.model.SysRole;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author qingfeng
@@ -18,6 +19,7 @@ public interface SysRoleService extends BaseService<SysRole> {
      * @param userId
      * @return
      */
-    R<SysRole> selectByUserId (Integer userId);
+    R<Map> selectByUserId (Integer userId);
 
+    R saveUserRole(Integer userId, String roleIds);
 }

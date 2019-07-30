@@ -9,4 +9,9 @@ public interface SysRoleMapper extends BaseMapper<SysRole> {
 
     List<SysRole> selectByUserId (Integer userId);
 
+    /**
+     * 查询所有角色
+     * @return
+     */
+    List<SysRole> list ();
 }
