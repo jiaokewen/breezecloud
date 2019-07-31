@@ -22,4 +22,6 @@ public interface SysRoleService extends BaseService<SysRole> {
     R<Map> selectByUserId (Integer userId);
 
     R saveUserRole(Integer userId, String roleIds);
+
+    R saveRoleResources (Integer roleId, String resourcesIds);
 }

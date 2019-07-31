@@ -4,6 +4,7 @@ import com.qingfeng.breeze.api.base.BaseService;
 import com.qingfeng.breeze.api.util.R;
 import com.qingfeng.breeze.user.model.SysResources;
 import com.qingfeng.breeze.user.model.SysRoleResources;
+import com.qingfeng.breeze.user.vo.ResourcesTree;
 
 import java.util.List;
 
@@ -21,4 +22,7 @@ public interface SysResourcesService extends BaseService<SysResources> {
      */
     R<SysResources> selectByUserId (Integer userId);
 
+    R<ResourcesTree> getTree ();
+
+    R<SysResources> selectByRoleId (Integer roleId);
 }

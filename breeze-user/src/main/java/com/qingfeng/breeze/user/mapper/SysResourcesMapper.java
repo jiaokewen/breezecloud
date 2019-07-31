@@ -10,4 +10,7 @@ public interface SysResourcesMapper extends BaseMapper<SysResources> {
 
     List<SysResources> selectByUserId (Integer userId);
 
+    List<SysResources> list ();
+
+    List<SysResources> selectByRoleId (Integer roleId);
 }

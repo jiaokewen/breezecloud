@@ -4,9 +4,11 @@ import com.qingfeng.breeze.api.base.BaseServiceImpl;
 import com.qingfeng.breeze.api.constants.ResponseConsts;
 import com.qingfeng.breeze.api.util.R;
 import com.qingfeng.breeze.user.mapper.SysRoleMapper;
+import com.qingfeng.breeze.user.mapper.SysRoleResourcesMapper;
 import com.qingfeng.breeze.user.mapper.SysUserRoleMapper;
 import com.qingfeng.breeze.user.model.SysResources;
 import com.qingfeng.breeze.user.model.SysRole;
+import com.qingfeng.breeze.user.model.SysRoleResources;
 import com.qingfeng.breeze.user.model.SysUserRole;
 import com.qingfeng.breeze.user.service.SysRoleService;
 import org.apache.commons.lang.StringUtils;
@@ -35,6 +37,9 @@ public class SysRoleServiceImpl extends BaseServiceImpl<SysRole> implements SysR
     @Autowired
     private SysUserRoleMapper userRoleMapper;
 
+    @Autowired
+    private SysRoleResourcesMapper sysRoleResourcesMapper;
+
     @Override
     public R<Map> selectByUserId(Integer userId) {
         try {
@@ -61,6 +66,25 @@ public class SysRoleServiceImpl extends BaseServiceImpl<SysRole> implements SysR
                     item.setUserId(userId);
                     item.setRoleId(Integer.valueOf(id));
                     userRoleMapper.insert(item);
+                }
+            }
+            return R.success(ResponseConsts.SUCCESS,"操作成功");
+        }catch (Exception e) {
+            return R.success(ResponseConsts.ERROR,"操作失败");
+        }
+    }
+
+    @Override
+    public R saveRoleResources(Integer roleId, String resourcesIds) {
+        try {
+            sysRoleResourcesMapper.deleteByRoleId(roleId);
+            if (StringUtils.isNotEmpty(resourcesIds)) {
+                String[] s = resourcesIds.split(",");
+                for (String id : s) {
+                    SysRoleResources item = new SysRoleResources();
+                    item.setRoleId(roleId);
+                    item.setResourcesId(Integer.valueOf(id));
+                    sysRoleResourcesMapper.insert(item);
                 }
             }
             return R.success(ResponseConsts.SUCCESS,"操作成功");

@@ -31,4 +31,10 @@ public class SysRoleController extends BaseController<SysRole> {
             (value = "roleIds") String roleIds) {
         return service.saveUserRole(userId,roleIds);
     }
+
+    @PostMapping(value = "saveRoleResources")
+    public R<Map> saveRoleResources (@RequestParam(value = "roleId") Integer roleId, @RequestParam
+            (value = "resourcesIds") String resourcesIds) {
+        return service.saveRoleResources(roleId,resourcesIds);
+    }
 }

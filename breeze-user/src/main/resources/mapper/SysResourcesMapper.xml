@@ -19,6 +19,11 @@
     from sys_resources
     where resources_id = #{resourcesId,jdbcType=INTEGER}
   </select>
+  <select id="list" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from sys_resources
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from sys_resources
     where resources_id = #{resourcesId,jdbcType=INTEGER}
@@ -130,5 +135,20 @@
     LEFT JOIN sys_user_role ur ON r.role_id = ur.role_id
     LEFT JOIN sys_user u ON ur.user_id = u.user_id
     WHERE u.user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByRoleId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    SELECT
+    re.resources_id,
+    re.icon,
+    re.parent_id,
+    re.resources_code,
+    re.resources_name,
+    re.resources_url,
+    re.type
+    FROM
+    sys_resources re
+    LEFT JOIN sys_role_resources rr ON re.resources_id = rr.resources_id
+    LEFT JOIN sys_role r ON rr.role_id = r.role_id
+    WHERE r.role_id = #{roleId,jdbcType=INTEGER}
   </select>
 </mapper>

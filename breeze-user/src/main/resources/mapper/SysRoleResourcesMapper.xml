@@ -19,6 +19,10 @@
     delete from sys_role_resources
     where id = #{id,jdbcType=INTEGER}
   </delete>
+  <delete id="deleteByRoleId" parameterType="java.lang.Integer" >
+    delete from sys_role_resources
+    where role_id = #{roleId,jdbcType=INTEGER}
+  </delete>
   <insert id="insert" parameterType="com.qingfeng.breeze.user.model.SysRoleResources" >
     insert into sys_role_resources (id, role_id, resources_id
       )
