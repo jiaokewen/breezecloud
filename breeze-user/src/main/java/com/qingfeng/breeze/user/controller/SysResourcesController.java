@@ -34,4 +34,9 @@ public class SysResourcesController extends BaseController<SysResources> {
     public R<SysResources> selectByUserId (@PathVariable("roleId") Integer roleId) {
         return service.selectByRoleId(roleId);
     }
+
+    @GetMapping
+    public R<SysResources> list () {
+        return service.list();
+    }
 }

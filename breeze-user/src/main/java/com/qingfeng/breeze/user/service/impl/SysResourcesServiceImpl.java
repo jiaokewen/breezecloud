@@ -72,6 +72,23 @@ public class SysResourcesServiceImpl extends BaseServiceImpl<SysResources> imple
         }
     }
 
+    @Override
+    public R<SysResources> list() {
+        try {
+            List<SysResources> list = mapper.list();
+            return R.success(ResponseConsts.SUCCESS,"查询成功",list);
+        }catch (Exception e) {
+            logger.error("查询资源失败",e.getMessage());
+            return R.fail(ResponseConsts.ERROR,"查询资源失败");
+        }
+    }
+
+    /**
+     * 构建父节点的子节点
+     * @param p
+     * @param list
+     * @return
+     */
     private ResourcesTree buildChildren (ResourcesTree p, List<SysResources> list) {
         List<ResourcesTree> child = new ArrayList<>();
         for (SysResources item : list) {

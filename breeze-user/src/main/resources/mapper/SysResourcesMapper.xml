@@ -24,6 +24,16 @@
     <include refid="Base_Column_List" />
     from sys_resources
   </select>
+  <select id="listByPage" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select
+    <include refid="Base_Column_List" />
+    from sys_resources
+    <where>
+      <if test="resourcesName !=null and resourcesName != ''">
+        resources_name like CONCAT('%',#{resources_name,jdbcType=VARCHAR},'%')
+      </if>
+    </where>
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from sys_resources
     where resources_id = #{resourcesId,jdbcType=INTEGER}

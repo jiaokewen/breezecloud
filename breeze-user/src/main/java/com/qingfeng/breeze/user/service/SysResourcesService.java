@@ -25,4 +25,6 @@ public interface SysResourcesService extends BaseService<SysResources> {
     R<ResourcesTree> getTree ();
 
     R<SysResources> selectByRoleId (Integer roleId);
+
+    R<SysResources> list();
 }
