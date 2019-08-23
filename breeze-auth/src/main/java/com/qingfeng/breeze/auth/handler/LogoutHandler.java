@@ -21,8 +21,6 @@ import java.io.IOException;
 public class LogoutHandler implements LogoutSuccessHandler {
     @Override
     public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
-        httpServletResponse.setContentType("application/json;charset=UTF-8");
-        R r = R.success(ResponseConsts.SUCCESS,"已退出登录");
-        httpServletResponse.getWriter().write(JSON.toJSONString(r));
+        httpServletResponse.sendRedirect("http://localhost:4000/api/exit");
     }
 }

@@ -74,7 +74,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/login","/login.html").permitAll()
+                .antMatchers("/login","/login.html","/exit").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -84,7 +84,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureHandler(loginFailHandler)
                 .and()
                 .logout()
-                .logoutUrl("/sysUser/logout")
                 .logoutSuccessHandler(logoutHandler)
                 .invalidateHttpSession(true)
                 //必须允许所有用户访问我们的登录页（例如未验证的用户，否则验证流程就会进入死循环）
